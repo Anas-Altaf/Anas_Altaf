@@ -42,6 +42,9 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [canScrollLeft, setCanScrollLeft] = React.useState(false);
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const isDraggingRef = useRef(false);
+  const startXRef = useRef(0);
+  const scrollLeftStartRef = useRef(0);
 
   useEffect(() => {
     if (carouselRef.current) {
@@ -49,6 +52,50 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       checkScrollability();
     }
   }, [initialScroll]);
+
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    carousel.style.cursor = "grab";
+
+    const handleMouseDown = (e: MouseEvent) => {
+      isDraggingRef.current = true;
+      startXRef.current = e.clientX;
+      scrollLeftStartRef.current = carousel.scrollLeft;
+      carousel.style.cursor = "grabbing";
+      e.preventDefault();
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDraggingRef.current) return;
+      const x = e.clientX;
+      const walk = (x - startXRef.current) * 2; // adjust speed multiplier as needed
+      carousel.scrollLeft = scrollLeftStartRef.current - walk;
+    };
+
+    const handleMouseUp = () => {
+      isDraggingRef.current = false;
+      carousel.style.cursor = "grab";
+    };
+
+    const handleMouseLeave = () => {
+      isDraggingRef.current = false;
+      carousel.style.cursor = "grab";
+    };
+
+    carousel.addEventListener("mousedown", handleMouseDown);
+    carousel.addEventListener("mousemove", handleMouseMove);
+    carousel.addEventListener("mouseup", handleMouseUp);
+    carousel.addEventListener("mouseleave", handleMouseLeave);
+
+    return () => {
+      carousel.removeEventListener("mousedown", handleMouseDown);
+      carousel.removeEventListener("mousemove", handleMouseMove);
+      carousel.removeEventListener("mouseup", handleMouseUp);
+      carousel.removeEventListener("mouseleave", handleMouseLeave);
+    };
+  }, []);
 
   const checkScrollability = () => {
     if (carouselRef.current) {
