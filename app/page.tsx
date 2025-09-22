@@ -2,8 +2,13 @@ import Heading from "@/components/heading";
 import { Card, Carousel } from "@/components/ui/apple-cards-carousel";
 import { Cover } from "@/components/ui/cover";
 import { SparklesCore } from "@/components/ui/sparkles";
+import { ContactFormDemo } from "@/components/wrapped/contact-form";
+import { FloatingDockDemo } from "@/components/wrapped/floating-dock";
 import { SparklesPreview } from "@/components/wrapped/sparklesView";
+import SwiperAuto from "@/components/wrapped/swiper-auto";
 import { AnimatedTestimonialsDemo } from "@/components/wrapped/testimonials";
+import { TimelineDemo } from "@/components/wrapped/timeline-view";
+import { TypewriterEffectSmoothDemo } from "@/components/wrapped/type-writer-effect";
 import Image from "next/image";
 
 const DummyContent = () => {
@@ -112,13 +117,20 @@ export default function Home() {
       </div>
       <div>
         <Heading>Services</Heading>
+        <TimelineDemo />
       </div>
       <div>
-        <Heading>Technology Stack</Heading>
+        <Heading className="my-10">Technology Stack</Heading>
+        <SwiperAuto />
       </div>
       <div>
         <Heading>Testimonials</Heading>
         <AnimatedTestimonialsDemo />
+      </div>
+      <div>
+        {/* <Heading>Contact</Heading> */}
+        <TypewriterEffectSmoothDemo />
+        <ContactFormDemo />
       </div>
     </>
   );

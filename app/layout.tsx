@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { FloatingDockDemo } from "@/components/wrapped/floating-dock";
 
 // Configure Poppins
 const poppins = Poppins({
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={` dark ${poppins.variable} antialiased`}>
         {children}
+        <FloatingDockDemo />
       </body>
     </html>
   );

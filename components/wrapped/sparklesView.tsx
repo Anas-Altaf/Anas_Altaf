@@ -2,16 +2,18 @@
 import React from "react";
 import { SparklesCore } from "../ui/sparkles";
 import { Spotlight } from "../ui/spotlight";
+import { ContainerTextFlipDemo } from "./text-flip-demo";
 
 export function SparklesPreview() {
   return (
-    <div className="relative h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <div className="relative h-screen w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="pointer-events-none absolute inset-0 [background-size:40px_40px] select-none [background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]" />
-
-      <h1 className="md:text-7xl text-3xl lg:text-9xl font-bold text-center text-white relative z-20">
-        Anas Altaf
+      <h6 className="text-white max-sm:text-sm text-2xl font-semibold">Meet</h6>
+      <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center text-white relative z-10">
+        Anas Altaf{" "}
+        <span className="text-indigo-500 text-3xl font-semibold">to</span>
       </h1>
-      <div className="w-[40rem] h-40 relative">
+      <div className="w-[40rem] h-10 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -29,8 +31,10 @@ export function SparklesPreview() {
         />
 
         {/* Radial Gradient to prevent sharp edges */}
+
         <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
       </div>
+      <ContainerTextFlipDemo />
     </div>
   );
 }
