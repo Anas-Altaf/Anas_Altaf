@@ -132,6 +132,10 @@ export default function Home() {
         <TypewriterEffectSmoothDemo />
         <ContactFormDemo />
       </div>
+      {/* Footer */}
+      <div className="w-full h-full py-10">
+        <Heading>👋 Thanks for stopping By!</Heading>
+      </div>
     </>
   );
 }
