@@ -11,7 +11,7 @@ export function SparklesPreview() {
       <h6 className="text-white max-sm:text-sm text-2xl font-semibold">Meet</h6>
       <h1 className="md:text-7xl text-5xl lg:text-9xl font-bold text-center text-white relative z-10">
         Anas Altaf{" "}
-        <span className="text-indigo-500 text-3xl font-semibold">to</span>
+        <span className="text-indigo-500 text-3xl font-semibold">and</span>
       </h1>
       <div className="w-[40rem] h-10 relative">
         {/* Gradients */}
