@@ -31,41 +31,67 @@ const DummyContent = () => {
 };
 const data = [
   {
-    category: "Chat & Communication",
-    title: "Quick Alert - Stay connected.",
+    category: "Flutter Development",
+    title: "Quick Alert - Emergency Communication App",
     src: "/ss/01.png",
     content: <DummyContent />,
+    technologies: ["Flutter", "Firebase", "Dart", "Real-time Database"],
+    description: "Cross-platform emergency alert system built with Flutter, featuring real-time notifications and location-based services.",
+    slug: "quick-alert"
   },
   {
-    category: "Collaboration",
-    title: "Glitter of Hope - Made the donations easy.",
+    category: "React Native Development",
+    title: "Glitter of Hope - Donation Platform",
     src: "/ss/02.png",
     content: <DummyContent />,
+    technologies: ["React Native", "Node.js", "MongoDB", "Stripe"],
+    description: "AI-powered donation platform connecting donors with causes, built with React Native and intelligent matching algorithms.",
+    slug: "glitter-of-hope"
   },
   {
-    category: "Social & Productivity",
-    title: "Money Mouthy - Microblogging Social App.",
+    category: "Flutter & AI Integration",
+    title: "Money Mouthy - AI-Powered Social App",
     src: "/ss/03.png",
     content: <DummyContent />,
+    technologies: ["Flutter", "TensorFlow Lite", "Firebase ML", "Dart"],
+    description: "Microblogging platform with AI content moderation and personalized recommendations using machine learning.",
+    slug: "money-mouthy"
   },
-
   {
-    category: "E-Commerce",
-    title: "Lake Wood - Brand Personalized online store.",
+    category: "Cross-Platform E-Commerce",
+    title: "Lake Wood - Personalized Shopping",
     src: "/ss/04.png",
     content: <DummyContent />,
+    technologies: ["React Native", "AI Recommendations", "AR Try-on", "Node.js"],
+    description: "AI-driven e-commerce platform with personalized recommendations and AR product visualization.",
+    slug: "lake-wood"
   },
   {
-    category: "E-Commerce",
-    title: "Voitto - Online Hockey Store",
+    category: "Flutter E-Commerce",
+    title: "Voitto - Sports Equipment Store",
     src: "/ss/05.png",
     content: <DummyContent />,
+    technologies: ["Flutter", "AI Chat Support", "Payment Integration", "Firebase"],
+    description: "Online hockey store with AI-powered customer support and personalized product recommendations.",
+    slug: "voitto"
   },
   {
-    category: "Religion",
-    title: "Kitab ul Azkar - Dua and Zikr (Arabic & Urdu) App.",
+    category: "React Native & AI",
+    title: "Kitab ul Azkar - Smart Islamic App",
     src: "/ss/06.png",
     content: <DummyContent />,
+    technologies: ["React Native", "AI Translation", "Speech Recognition", "SQLite"],
+    description: "AI-enhanced Islamic prayer app with intelligent dua recommendations and multilingual support.",
+    slug: "kitab-ul-azkar"
+  },
+  {
+    category: "Flutter Development",
+    title: "Plate Mate - AI Nutrition Tracker",
+    src: "/ss/Screenshot_20250922_153635.png",
+    content: <DummyContent />,
+    technologies: ["Flutter", "AI Image Recognition", "Nutrition API", "Firebase"],
+    description: "AI-powered food tracking app that recognizes meals from photos and provides nutritional insights.",
+    slug: "plate-mate"
   },
 ];
 
