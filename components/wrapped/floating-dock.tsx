@@ -2,12 +2,19 @@ import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
+  IconBrandGmail,
+  IconBrandLinkedin,
   IconBrandX,
   IconExchange,
+  IconGlobe,
+  IconGlobeOff,
   IconHome,
   IconNewSection,
   IconTerminal2,
+  IconWebhook,
+  IconWorld,
 } from "@tabler/icons-react";
+import { Icon } from "lucide-react";
 
 export function FloatingDockDemo() {
   const links = [
@@ -20,52 +27,41 @@ export function FloatingDockDemo() {
     },
 
     {
-      title: "Products",
-      icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Components",
-      icon: (
-        <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "Aceternity UI",
-      icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
-      ),
-      href: "#",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
       title: "GitHub",
       icon: (
         <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "https://github.com/Anas-Altaf",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/anasaltaf",
+    },
+
+    {
+      title: "Email",
+      icon: (
+        <IconBrandGmail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "mailto:anasaltaf35@gmail.com",
+    },
+
+    {
+      title: "X",
+      icon: (
+        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://twitter.com/anas0altaf",
+    },
+    {
+      title: "Official Website",
+      icon: (
+        <IconWorld className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://o2omation.com",
     },
   ];
   return (

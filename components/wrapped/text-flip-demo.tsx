@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
 export function ContainerTextFlipDemo() {
-  const words = ["better", "modern", "beautiful", "awesome"];
+  const words = ["modern", "minimal", "faster", "responsive", "scalable"];
   return (
     <motion.h1
       initial={{

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,8 +10,9 @@ import "swiper/css/pagination";
 
 // import required modules
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-import { CardDemo } from "../CardDemo";
 import { div } from "framer-motion/client";
+import { AnimatedCard } from "../CardDemo";
+import { techStackData } from "@/data/tech-stack-data";
 
 export default function SwiperAuto() {
   return (
@@ -43,36 +44,15 @@ export default function SwiperAuto() {
         modules={[FreeMode, Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardDemo />
-        </SwiperSlide>
+        {techStackData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <AnimatedCard
+              logos={item.logos as never[]}
+              title={item.title}
+              description={item.description}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

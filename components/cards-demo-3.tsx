@@ -67,7 +67,7 @@ const Skeleton = () => {
 
   useEffect(() => {
     animate(sequence, {
-      // @ts-ignore
+      // @ts-expect-error: Motion library types don't include repeat property
       repeat: Infinity,
       repeatDelay: 1,
     });
